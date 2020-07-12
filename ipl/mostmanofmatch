@@ -1,0 +1,23 @@
+function mostmanofmatch(matches){
+    let res={};
+    for(var i in matches){
+       // console.log(i);
+        if(res.hasOwnProperty(matches[i].player_of_match)){
+            res[matches[i].player_of_match]+=1
+        }
+        else{
+            res[matches[i].player_of_match]=1;
+        }
+    }
+    
+    res1={};
+    for(var j in res)
+    {
+        if(res[j]>10)
+        res1[j]=res[j];
+    }
+    
+
+   return res1;
+}
+module.exports=mostmanofmatch;
